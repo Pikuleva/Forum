@@ -1,4 +1,6 @@
 using Forum.Data;
+using Forum.Services;
+using Forum.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace Forum
@@ -18,6 +20,7 @@ namespace Forum
                 options.UseSqlServer(connectionString);
             });
 
+            builder.Services.AddScoped<IPostService, PostService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
