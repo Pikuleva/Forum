@@ -18,8 +18,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Forum.Web.ViewModels\Forum.Web.ViewModels.csproj" />
-  </ItemGroup>
-
 </Project>

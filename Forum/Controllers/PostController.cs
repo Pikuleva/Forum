@@ -16,5 +16,9 @@ namespace Forum.Controllers
             IEnumerable<PostListViewModel> allPosts = await this.postService.ListAllAsync();
             return View(allPosts);
         }
+        public IActionResult Add()
+        {
+            return View();
+        }
     }
 }

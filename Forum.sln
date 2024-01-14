@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum", "Forum\Forum.csproj", "{4EAC3BDB-A683-4530-86E0-2BCFCF4BAFB2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Forum.Web.ViewModels", "Forum.Web.ViewModels\Forum.Web.ViewModels.csproj", "{141B5A60-8A89-4907-91C8-6D1781B8A393}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{4EAC3BDB-A683-4530-86E0-2BCFCF4BAFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EAC3BDB-A683-4530-86E0-2BCFCF4BAFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EAC3BDB-A683-4530-86E0-2BCFCF4BAFB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{141B5A60-8A89-4907-91C8-6D1781B8A393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{141B5A60-8A89-4907-91C8-6D1781B8A393}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{141B5A60-8A89-4907-91C8-6D1781B8A393}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{141B5A60-8A89-4907-91C8-6D1781B8A393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
