@@ -7,8 +7,10 @@ namespace Forum.Web.ViewModels.Post
     public class PostFormModul
     {
         [Required]
-        [StringLength(TittleMaxLength,MinimumLength = TittleMinLength)]
+        [StringLength(TittleMaxLength, MinimumLength = TittleMinLength)]
         public string Title { get; set; } = null!;
+        [Required]
+        [StringLength(ContentMaxLength,MinimumLength =ContentMinLength)]
         public string Content { get; set; } = null!;
     }
 }
