@@ -1,6 +1,13 @@
-﻿using Forum.Services.Interfaces;
+﻿using Forum.Data;
+using Forum.Services.Interfaces;
 using Forum.Web.ViewModels.Post;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Forum.Data;
+using Forum.Services.Interfaces;
+using Forum.Web.ViewModels.Post;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace Forum.Controllers
 {
@@ -45,7 +52,7 @@ namespace Forum.Controllers
         {
             try
             {
-                PostFormModul postModel = await this.postService.GetForEditByIdAsync(id);
+                PostFormModul postModel = await this.postService.GetForEditAndDeleteByIdAsync(id);
                 return View(postModel);
 
             }
@@ -72,6 +79,22 @@ namespace Forum.Controllers
             }
             return RedirectToAction("All");
         }
-   
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(string id)
+        {
+            try
+            {
+                await this.postService.DeleteByIdAsync(id);
+            }
+            catch (Exception)
+            {
+
+                return RedirectToAction("All");
+            }
+            return RedirectToAction("All");
+
+        }
+
     }
 }

@@ -10,8 +10,10 @@ namespace Forum.Services.Interfaces
 
         Task AddPostAsync(PostFormModul postViewModel);
 
-        Task<PostFormModul> GetForEditByIdAsync(string id);
+        Task<PostFormModul> GetForEditAndDeleteByIdAsync(string id);
 
         Task EditByIdAsync(string id,PostFormModul postEditedModel);
+
+        Task DeleteByIdAsync(string id);
     }
 }

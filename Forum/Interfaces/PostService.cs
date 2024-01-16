@@ -1,6 +1,7 @@
 ﻿using Forum.Data;
 using Forum.Services.Interfaces;
 using Forum.Web.ViewModels.Post;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Forum.Services
@@ -35,7 +36,7 @@ namespace Forum.Services
             await this.dbContext.SaveChangesAsync();
         }
 
-        public async Task<PostFormModul?> GetForEditByIdAsync(string id)
+        public async Task<PostFormModul?> GetForEditAndDeleteByIdAsync(string id)
         {
             Post postToEdit = await this.dbContext
                 .Posts
@@ -66,6 +67,19 @@ namespace Forum.Services
                 .ToArrayAsync();
                
             return allPosts;
+        }
+
+      
+        public async Task DeleteByIdAsync(string id)
+        {
+            Post postToDelete = await dbContext
+                  .Posts
+                  .FirstAsync(p=>p.Id.ToString()==id);
+
+            this.dbContext.Posts.Remove(postToDelete);
+            await this.dbContext.SaveChangesAsync();
+
+           
         }
     }
 }
